@@ -1,0 +1,25 @@
+{
+    "Description": "sovaflow, an automatic resting-state eeg processing pipeline using: 1) Robust Reference (PREP); 2) High Pass 1Hz; 3) Wavelet ICA Denoising; 4) Low Pass 50Hz; 5) Epoch Auto Rejection; 6) Band Power Calculation",
+    "RawSources": [
+        "\\sub-G2030\\ses-V1\\eeg\\sub-G2030_ses-V1_task-CE_eeg.vhdr"
+    ],
+    "Configuration": {
+        "name": "BIOMARCADORES",
+        "input_path": "E:\\Academico\\Universidad\\Posgrado\\Tesis\\Datos\\BASESDEDATOS\\BIOMARCADORES_BIDS",
+        "layout": {
+            "extension": ".vhdr",
+            "task": "CE",
+            "suffix": "eeg",
+            "return_type": "filename"
+        },
+        "args": {
+            "line_freqs": [
+                60
+            ]
+        },
+        "group_regex": "(.+).{3}",
+        "events_to_keep": null,
+        "run-label": "restCE"
+    },
+    "Sources": "\\derivatives\\sovaflow\\sub-G2030\\ses-V1\\eeg\\sub-G2030_ses-V1_task-CE_desc-wica_eeg.fif"
+}
